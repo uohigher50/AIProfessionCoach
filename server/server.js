@@ -3,7 +3,7 @@ import cors from 'cors';
 import fetch from 'node-fetch';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // 启用CORS
 app.use(cors());
@@ -14,9 +14,13 @@ app.use(express.static('.'));
 app.use('/styles', express.static('styles'));
 app.use('/scripts', express.static('scripts'));
 
+// 导入dotenv配置环境变量
+import dotenv from 'dotenv';
+dotenv.config();
+
 // DeepSeek R1 API配置
-const API_KEY = 'ab2da8c4-ae5a-4a79-bcb1-378c71a6bae1';
-const API_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+const API_KEY = process.env.DEEPSEEK_API_KEY;
+const API_URL = process.env.DEEPSEEK_API_URL;
 
 // 检查消息是否在允许的领域范围内
 function isInAllowedDomain(message) {
