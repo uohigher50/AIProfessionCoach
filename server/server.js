@@ -10,9 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // 配置静态文件服务
-app.use(express.static('.'));
+app.use(express.static('public'));
 app.use('/styles', express.static('styles'));
 app.use('/scripts', express.static('scripts'));
+app.use('/', express.static('.'));
 
 // 导入dotenv配置环境变量
 import dotenv from 'dotenv';
