@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI专业顾问系统</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <h1>AI专业顾问系统</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">历史记录</a></li>
+                <li><a href="#">关于系统</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 对话区域 -->
+        <div class="chat-container">
+            <!-- 历史对话记录 -->
+            <aside class="chat-history">
+                <h2>历史对话</h2>
+                <div class="history-list">
+                    <!-- 历史记录将通过JavaScript动态添加 -->
+                </div>
+            </aside>
+
+            <!-- 当前对话内容 -->
+            <section class="chat-main">
+                <div class="messages-container">
+                    <!-- 欢迎消息 -->
+                    <div class="message system">
+                        <p>欢迎使用AI专业顾问系统。我可以为您提供以下服务：</p>
+                        <ul>
+                            <li>半导体生产安全管理咨询</li>
+                            <li>甲醇加注安全规范指导</li>
+                        </ul>
+                    </div>
+                    <!-- 对话消息将通过JavaScript动态添加 -->
+                </div>
+
+                <!-- 输入区域 -->
+                <div class="input-area">
+                    <textarea id="userInput" placeholder="请输入您的问题..."></textarea>
+                    <button id="sendButton" type="button">发送</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 AI专业顾问系统 - 基于DeepSeek R1 API</p>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
